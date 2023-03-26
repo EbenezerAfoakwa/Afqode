@@ -1,0 +1,4587 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #000;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #fc98a3;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #1c1743;
+}
+
+.mouse-pointer-small {
+    position: fixed;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    background-color: #fc98a3;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20000;
+    pointer-events: none;
+}
+
+.mouse-pointer-big {
+    position: fixed;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #fc98a3;
+    background-color: #fc98a423;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition-timing-function: linear;
+    transition-duration: 300ms;
+    pointer-events: none;
+    z-index: 20000;
+}
+
+.mouse-pointer-big.link-hover {
+    background-color: transparent;
+    background-color: #fc98a3;
+    width: 30px;
+    height: 30px;
+}
+
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 49px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: 1px solid #fc98a448;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 15px;
+    color: #000000;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #fc98a3;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: 1px solid #fc98a448;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 15px;
+    color: #000000;
+}
+
+input[type="email"]:focus {
+    border: 1px solid #fc98a3;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: 1px solid #fc98a448;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 15px;
+    color: #000000;
+}
+
+input[type="number"]:focus {
+    border: 1px solid #fc98a3;
+}
+
+
+/* video & picture background */
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -0;
+}
+
+@media Screen and (max-width: 767px) {
+    #myVideo {
+        display: none !important;
+        margin-bottom: 40px;
+    }
+    .full-bg-img .container .text-center img {
+        padding-top: 80px;
+        padding-bottom: 0px;
+    }
+}
+
+@media Screen and (min-width: 767px) {
+    .full-bg-img {
+        display: none !important;
+        margin-top: 0px;
+    }
+}
+
+
+/* video & picture background */
+
+
+/* button-48 */
+
+.button-48 {
+    appearance: none;
+    background-color: #fc98a4c0;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Clarkson, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.3em;
+    opacity: 1;
+    outline: 0;
+    padding: 1em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(0.694, 0, 0.335, 1), background-color 100ms cubic-bezier(0.694, 0, 0.335, 1), color 100ms cubic-bezier(0.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.button-48:before {
+    animation: opacityFallbackOut 0.5s step-end forwards;
+    backface-visibility: hidden;
+    background: #1c1743;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-clip-path 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 100%;
+    color: #fff;
+}
+
+.button-48:hover {
+    color: #fff;
+}
+
+.button-48:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+    border-radius: 2px;
+    color: #fff;
+}
+
+.button-48:after {
+    background-color: #fc98a4b7;
+    color: #fff;
+}
+
+.button-48 span {
+    z-index: 1;
+    position: relative;
+}
+
+
+/* button-48 */
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    height: 400px;
+    position: absolute;
+    width: 500px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(80deg);
+    transform: rotateZ(80deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 90s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 400px;
+    width: 500px;
+}
+
+.logo .space {
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(1);
+    /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1);
+    /* Microsoft Edge and Firefox 35+ */
+}
+
+
+/* Disable grayscale on hover */
+
+.space:hover {
+    -webkit-filter: grayscale(0);
+    filter: none;
+}
+
+
+/* END SECTION BLOG */
+
+.section-blog .header-section .sm-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: -20px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #000;
+}
+
+.section-blog .header-section .sm-title:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translate(-12px, -50%);
+    width: 50px;
+    height: 3px;
+    background-color: #fc98a3;
+}
+
+.section-blog .header-section .sm-title:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(12px, -50%);
+    width: 50px;
+    height: 3px;
+    background-color: #fc98a3;
+}
+
+.section-blog .header-section .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1em;
+}
+
+.section-blog .single-blog {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.section-blog .single-blog ul {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.section-blog .single-blog ul li {
+    display: inline-block;
+}
+
+.section-blog .single-blog ul li {
+    padding: 2px 8px;
+    border-right: 1px solid #ddd;
+}
+
+.section-blog .single-blog ul li:last-child {
+    border-right: none;
+}
+
+.section-blog .single-blog ul .tags a {
+    color: #fc98a3;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.section-blog .single-blog ul .date {
+    color: #000;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.section-blog .single-blog .content {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+}
+
+
+/* .section-blog .single-blog:hover .content {
+    box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); 
+  } */
+
+.section-blog .single-blog .content .image-and-more {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.section-blog .single-blog .content .image-and-more .image {
+    position: absolute;
+    bottom: 0;
+    left: -60px;
+    background-color: #fc98a3;
+    border-radius: 10px;
+}
+
+.section-blog .single-blog .content .image-and-more .image img {
+    width: 110px;
+    transform: translate(-10px, -10px);
+    border-radius: 10px;
+}
+
+.section-blog .single-blog .content .read-more {
+    display: inline-block;
+    background-color: #e8e8e8;
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+    line-height: 50px;
+    transition: all 0.3s;
+    color: #000;
+}
+
+.section-blog .single-blog .content .read-more a {
+    color: #000;
+}
+
+.section-blog .single-blog .content .read-more:hover {
+    background-color: #fc98a3;
+}
+
+.section-blog .single-blog .content .read-more a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section-blog .single-blog .content .read-more .text {
+    padding-right: 15px;
+    padding-left: 30px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.section-blog .single-blog .content .read-more .icon {
+    display: inline-block;
+    background-color: #1c1743;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.section-blog .single-blog .content .read-more .icon img {
+    width: 10px;
+    height: 10px;
+}
+
+.section-blog .single-blog .content .title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section-blog .single-blog .content .writer {
+    text-align: right;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* Slow-motion Zoom Container */
+
+.zoomWrapper {
+    border: 5px solid #fc98a43e;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto 0px auto;
+    /* -- Prevent flicker -- */
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.zoomWrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.zoomWrapper img:hover {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+
+/* Slow-motion Zoom Container */
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5;
+}
+
+.site-footer hr.small {
+    margin: 20px 0;
+}
+
+.site-footer h6 {
+    color: #eec8cc;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.site-footer a:hover {
+    color: #fc98a4b6;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    display: block;
+}
+
+.footer-links a {
+    color: #fff;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #fc98a4b7;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block;
+}
+
+.site-footer .social-icons {
+    text-align: right;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.copyright-text {
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.social-icons a {
+    background-color: #fc98a4b7;
+    color: #000;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-icons a.twitter:hover {
+    background-color: #00aced;
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #3CCF4E;
+}
+
+.social-icons a.dribbble:hover {
+    background-color: #e80f88;
+}
+
+@media (max-width: 767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+    }
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 50px;
+    color: #fff;
+    padding: 5px 11px 10px;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #1c1743;
+}
+
+#button:active {
+    background-color: #1c1743;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (min-width: 1500px) {
+    .container-fluid {
+        padding: 0px 60px;
+    }
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 49px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 140px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 40px 0px 0px 5px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 400px 25px 200px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 15px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 0px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .section-blog {
+        font-family: "Poppins", sans-serif;
+        margin: -130px 0px 100px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 300px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 20px 0px;
+    }
+    #contact-bg {
+        padding: 20px 90px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-weight: 500;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .reputation .section {
+        padding: 150px 160px;
+    }
+    .reputation .section h2 {
+        font-weight: 500;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+    .site-footer .container #africa .desktop {
+        display: block;
+    }
+    .site-footer .container #africa .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .container-fluid {
+        padding: 0px 60px;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -35px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 49px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 140px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 64px 0px 0px 0px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 115px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 400px 25px 200px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 15px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 0px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .section-blog {
+        font-family: "Poppins", sans-serif;
+        margin: -130px 0px 100px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 300px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 20px;
+    }
+    #contact-bg {
+        padding: 20px 90px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: -0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-weight: 500;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .reputation .section {
+        padding: 150px 160px;
+    }
+    .reputation .section h2 {
+        font-weight: 500;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+        /* z-index: 600;
+        position: relative; */
+    }
+    .site-footer .container #africa .desktop {
+        display: block;
+    }
+    .site-footer .container #africa .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -18%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 49px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 100px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 70px 0px 0px 0px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 90px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 400px 25px 200px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 0px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 280px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 90px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 49px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 40px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 50px 0px 0px 0px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 110px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 400px 25px 200px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 0px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 280px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 18px 0px;
+    }
+    #contact-bg {
+        padding: 20px 50px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 49px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 40px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 67px 0px 0px 0px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 110px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 400px 25px 200px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 20px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 50px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 96%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 305px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 20px 50px;
+    }
+    .section #contact {
+        padding: 10px 20px 0px;
+    }
+    #contact-bg {
+        padding: 20px 50px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 60px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -26%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 45px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 40px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 60px 0px 0px 0px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 100px 25px 100px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 50px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 180px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 20px 50px;
+    }
+    .section #contact {
+        padding: 10px 17px 0px;
+    }
+    #contact-bg {
+        padding: 20px 40px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 60px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -24%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .header-text1 .container-fluid h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 0px 0px 0px 20px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 63px 0px 0px 0px;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 90px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 100px 25px 100px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 0px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 30px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        padding-top: 240px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 50px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 94%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 40px 200px 40px;
+    }
+    .logo .section-blog {
+        padding: 220px 20px 50px;
+    }
+    .section #contact {
+        padding: 10px 17px 0px;
+    }
+    #contact-bg {
+        padding: 20px 40px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 0px 0px 0px 20px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-weight: 500;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 60px 110px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container-fluid {
+        padding: 0px 40px;
+    }
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -19%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid h1 {
+        padding-right: 50px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 0px 0px 0px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 30px 20px 0px 0px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 100px 0px 0px 0px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 100px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 35px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: justify;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: justify;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 50px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding-top: 30px;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 10px 220px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 100px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-weight: 500;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-fluid {
+        padding: 0px 40px;
+    }
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -19%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid h1 {
+        padding-right: 50px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 0px 0px 0px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 30px 20px 0px 0px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 100px 0px 0px 0px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 100px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 35px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 0px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: justify;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: justify;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 50px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding-top: 30px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 10px 220px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 100px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-weight: 500;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 140px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container-fluid {
+        padding: 0px 40px;
+    }
+    header {
+        width: 100%;
+        height: 100vh;
+    }
+    .header-text2 {
+        display: none;
+    }
+    .header-text1 {
+        display: block;
+    }
+    .header-text1 .container-fluid {
+        position: absolute;
+        bottom: -22%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+    .header-text1 .container-fluid h1 {
+        padding-right: 50px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text1 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 0px 0px 0px;
+    }
+    .header-text1 .container-fluid .link {
+        padding: 30px 20px 0px 0px;
+    }
+    .header-text1 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text1 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text1 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text1 .container-fluid .button-p2 {
+        margin: 120px 0px 0px 0px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 100px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 35px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 10px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 26px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: justify;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: justify;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 50px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding-top: 30px;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 98%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-weight: 500;
+    }
+    .logo #img {
+        padding: 10px 210px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 10px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 60px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-weight: 500;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 13px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-weight: 500;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section h2 {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+    }
+    .reputation .section {
+        padding: 150px 100px;
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 60px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 0px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 500px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 35px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 5px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 99%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 140px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 5px 50px;
+    }
+    .section #contact {
+        padding: 10px 20px 0px;
+    }
+    #contact-bg {
+        padding: 20px 120px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 10px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+    .site-footer .container #africa .desktop {
+        display: none;
+    }
+    .site-footer .container #africa .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 0px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 450px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 35px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 5px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 130px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 5px 50px;
+    }
+    .section #contact {
+        padding: 10px 20px 0px;
+    }
+    #contact-bg {
+        padding: 20px 80px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 10px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 0px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        display: none;
+        background-color: #fc98a3;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: -42px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 35px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 350px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 10px 0px 0px 0px;
+    }
+    .chat-button .button-inner {
+        z-index: 500;
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        background-color: #fc98a3;
+        padding: 7px 13px 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125)
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 30px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 5px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 130px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 5px 50px;
+    }
+    .section #contact {
+        padding: 10px 20px 0px;
+    }
+    #contact-bg {
+        padding: 20px 100px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 10px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 10px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        display: none;
+        background-color: #fc98a3;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 0px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 250px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 30px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 5px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .slider {
+        background: pr;
+        box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 97%;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 5px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 5px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 60px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 10px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 10px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 23px;
+        display: none;
+        background-color: #fc98a3;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 35px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 200px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 30px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 5px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 5px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 5px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 40px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 10px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 10px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 30px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 200px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 30px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 5px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .section-blog {
+        font-family: "Poppins", sans-serif;
+        margin: -130px 5px 100px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 5px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 5px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 20px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 10px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 10px 90px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 57px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 80px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 30px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 0px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .section-blog {
+        font-family: "Poppins", sans-serif;
+        margin: -130px 7px 100px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 5px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 20px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 0px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 6px 100px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container-fluid {
+        padding: 0px 20px;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    .writing-mode {
+        writing-mode: vertical-lr;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0px -25px;
+        margin-bottom: -1px;
+        font-weight: bolder;
+        color: #fc98a3;
+    }
+    .header-text1 {
+        display: none;
+    }
+    .header-text2 {
+        display: block;
+    }
+    .header-text2 .container-fluid {
+        margin-top: 0px;
+    }
+    .header-text2 .container-fluid h1 {
+        padding-right: 0px;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .header-text2 .container-fluid .msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 40px 0px 0px;
+    }
+    .header-text2 .container-fluid .link {
+        padding: 40px 80px 0px 0px;
+        margin-top: 0px;
+        line-height: 0;
+    }
+    .header-text2 .container-fluid .link #text-move .link-msg {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .header-text2 .container-fluid .moving-arrow:after {
+        position: absolute;
+        transform: translateX(0) translateY(0);
+        transition: transform 0.2s ease-in-out;
+        content: "→";
+        padding: 10px 0px 0px 10px;
+    }
+    .header-text2 .container-fluid .moving-arrow:hover:after {
+        transform: translateX(10px);
+    }
+    .header-text2 .container-fluid .button-p2 {
+        margin: 0px 0px 0px 5px;
+    }
+    .portfolio {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+    }
+    .portfolio .container-fluid .portfolio-head-text {
+        padding: 0px 0px 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-head-text .msg {
+        color: #fc98a3;
+        font-size: 12px;
+    }
+    .portfolio .container-fluid .portfolio-head-text h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container {
+        padding: 0px 0px;
+    }
+    .portfolio .container-fluid .portfolio-image .image-container section {
+        margin-top: 30px;
+    }
+    .our-service {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        background-color: #1c1743;
+    }
+    .our-service .our-service-container {
+        padding: 140px 5px;
+    }
+    .our-service .our-service-container h2 {
+        font-size: 23px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+    .our-service .our-service-container .msg2 {
+        color: #fff;
+        text-align: left;
+        padding-top: 100px;
+    }
+    .our-service .our-service-container .msg2 p {
+        padding-top: 40px;
+    }
+    .our-service .our-service-container h3 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us {
+        width: 100%;
+        height: auto;
+        padding: 130px 0px 120px;
+    }
+    .about-us .container .about-us-container p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+    }
+    .about-us .container .about-us-container h2 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .about-us .container .about-us-container .btn3 {
+        padding-top: 15px;
+    }
+    .about-us .container .about-us-container .msg p {
+        font-size: 15px;
+        line-height: 2.5;
+        text-align: justify;
+        color: #40514e;
+        padding: 30px 5px 0px;
+    }
+    .section-blog {
+        font-family: "Poppins", sans-serif;
+        margin: -130px 5px 100px;
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 140px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .logo #img {
+        padding: 0px 5px 40px;
+    }
+    .logo #img .space {
+        padding-top: 30px;
+    }
+    .logo .section-blog {
+        padding: 230px 0px 50px;
+    }
+    .section #contact {
+        padding: 10px 15px 0px;
+    }
+    #contact-bg {
+        padding: 20px 20px;
+        border: 5px solid #feece9;
+        background-color: #fff;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);  */
+    }
+    #contact-bg h2 {
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #contact-bg .form-group {
+        padding-top: 0px;
+    }
+    #what-they-say .testimony {
+        padding: 120px 0px 200px 0px;
+        text-align: justify;
+    }
+    #what-they-say .testimony .head p {
+        color: #fc98a3;
+        font-size: 12px;
+        padding: 15px 0px 10px;
+    }
+    #what-they-say .testimony #message p {
+        line-height: 2;
+        font-size: 15px;
+        margin-right: 0px;
+    }
+    #what-they-say .testimony h2 {
+        padding: 0px 0px 40px;
+        font-size: 25px;
+    }
+    .reputation {
+        background-color: #fc98a3;
+        margin-top: -80px;
+        position: static;
+        z-index: -1;
+    }
+    .reputation .section {
+        padding: 150px 20px;
+    }
+    .reputation .section h2 {
+        font-size: 23px;
+        color: #fff;
+        text-align: center;
+        /* font-size: 28px; 
+    font-weight: 700; */
+    }
+    .site-footer {
+        background-color: #1c1743;
+        padding: 140px 6px 100px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+    }
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #fc98a3;
+    }
+}

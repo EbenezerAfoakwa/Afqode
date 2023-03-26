@@ -1,0 +1,7138 @@
+/* full navigation bar */
+
+@media screen and (min-width: 1500px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 25px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 25px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 65px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 60px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 84%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 80px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 49px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 49px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 25px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 25px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 60px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #000;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 55px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 84%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 80px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 49px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 49px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 25px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 25px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 60px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 60px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 84%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 80px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 49px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 49px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 25px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 25px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 60px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 60px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 80px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 49px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 49px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 25px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 25px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 60px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 60px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 49px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 49px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 60px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 60px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 45px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 45px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 62px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 60px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 60px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 140px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 57px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 35px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 40px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 45px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 45px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 45px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 110px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 45px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 40px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 45px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 45px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 45px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 110px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 45px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 40px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 25px;
+        right: 42px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 25px;
+        left: 42px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 85px;
+        padding: 0 40px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .title a {
+        z-index: 10000;
+        background-color: #fff;
+        color: #40514e;
+        text-decoration: none;
+        width: 100px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 100px;
+        font-size: 12px;
+        margin: 30px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 45px;
+        height: 45px;
+        right: 38px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 1.5px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: url(images/Overlay\ image1.jpg); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 82%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        /* box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125); */
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px 80px 80px 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 25px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 20px 0px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 80%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+        display: none;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 40px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        /* background-color: rgba(0, 0, 0, 0.471); */
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 25px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 25px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 90px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        right: 22px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        text-transform: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: none;
+        text-align: center;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 94%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 35px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 25px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 25px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 90px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 65px;
+        right: 22px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        text-transform: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: none;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 93%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 35px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 25px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 25px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 90px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 65px;
+        right: 22px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        text-transform: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: none;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 93%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 35px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 22px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 22px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 25px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 90px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 65px;
+        right: 22px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        text-transform: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: none;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 90%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 32px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 22px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 22px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 24px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 90px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 70px;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        text-transform: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: none;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 90%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 32px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 22px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 22px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 23px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 80px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 65px;
+        right: 23px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-transform: none;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 90%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 32px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 22px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 23px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 70px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 65px;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 90%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 20px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 32px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .chat-button .button-inner {
+        z-index: 100;
+        position: fixed;
+        bottom: 20px;
+        right: 22px;
+        background-color: #1c1743;
+        padding: 5px 11px 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    #button {
+        display: inline-block;
+        background-color: #1c1743;
+        width: 46px;
+        height: 44px;
+        text-align: center;
+        border-radius: 5px;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 1px 1px 1px 1px #fc98a4c0;
+    }
+    @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans", sans-serif;
+    }
+    *::selection {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    header .nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        z-index: 1000;
+    }
+    header .nav .title {
+        line-height: 65px;
+        padding: 0 23px;
+        font-size: 17px;
+        font-weight: 900;
+        color: #fc98a3;
+        z-index: 1000;
+        position: relative;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .title .bar:before,
+    header .nav .title .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+    }
+    header .nav .title-number a {
+        position: absolute;
+        margin: auto;
+        display: flex;
+        right: 70px;
+        font-size: 12px;
+        padding: 22px 0px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #40514e;
+    }
+    header .nav .title-number a:hover {
+        color: #fc98a3;
+        cursor: pointer;
+    }
+    header .nav .toggle {
+        position: absolute;
+        margin: auto;
+        width: 40px;
+        height: 65px;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #1c1743;
+        height: 40px;
+    }
+    header .nav .toggle .bar {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+    header .nav .toggle .bar:before,
+    header .nav .toggle .bar:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        left: 0;
+        transform-origin: center center;
+        transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+    }
+    header .nav .toggle .bar:before {
+        top: -5px;
+    }
+    header .nav .toggle .bar:after {
+        bottom: -5px;
+    }
+    header .nav .toggle.clicked .bar {
+        background: transparent;
+        color: #fff;
+    }
+    header .nav .toggle.clicked .title {
+        color: #fff;
+    }
+    header .nav .toggle.clicked .bar:before,
+    header .nav .toggle.clicked .bar:after {
+        background: #fff;
+    }
+    header .nav .toggle.clicked .bar:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    header .nav .toggle.clicked .bar:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    header .nav nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    header .nav nav .showcase {
+        background: #1c1743;
+        flex: 1;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Overlay\ image1.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container {
+        background: #1c1743;
+        width: 75%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 10px 5px 30px 10px rgba(0, 0, 0, 0.125);
+        display: none;
+    }
+    header .nav nav .showcase .showcase-container:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    header .nav nav .showcase .showcase-menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        overflow-y: visible;
+        list-style-type: none;
+        transition: top 0.25s ease;
+    }
+    header .nav nav .showcase .showcase-menu li {
+        width: auto;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-align: left;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 0px;
+    }
+    header .nav nav .showcase .showcase-menu li .left-header {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 15px;
+        display: none;
+    }
+    header .nav nav .showcase .showcase-menu li p {
+        margin: 5px 10px;
+        font-weight: 500;
+    }
+    header .nav nav .showcase .showcase-menu li.overlay:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+    }
+    header .nav nav .menu {
+        flex: 1;
+        background-color: #fc98a3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        text-align: left;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    header .nav nav .menu .main-menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 100;
+        width: 90%;
+    }
+    header .nav nav .menu ul {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        max-height: 100%;
+        overflow-y: auto;
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar {
+        width: 6px;
+        height: 10px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb {
+        border: 0px none #ffffff;
+        border-radius: 0px;
+        background: #f1f1f100;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+        background: #f1f1f100;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border: 0px none #ffffff;
+        border-radius: 0;
+        width: 0px;
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-track:active {
+        background: rgba(0, 0, 0, 0.1);
+    }
+    header .nav nav .menu ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+    header .nav nav .menu ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    header .nav nav .menu ul li .number {
+        display: inline-block;
+        padding: 0 0 0 0px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 150px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        display: none;
+    }
+    header .nav nav .menu ul li .number span {
+        display: block;
+        font-size: 32px;
+        transition: transform 0.25s ease;
+        transform: translateY(100%);
+        font-weight: 700;
+        display: none;
+    }
+    header .nav nav .menu ul li a {
+        display: inline-block;
+        font-size: 32px;
+        color: #fff;
+        line-height: 1;
+        transition: transform 0.25s ease;
+        text-decoration: none;
+        margin: 25px 0px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+    }
+    /* header .nav nav .menu ul li a:hover {
+        background-color: #2F3A8F;
+    } */
+    header .nav nav .menu ul li:hover a {
+        transform: translateX(20px);
+    }
+    header .nav nav .menu ul li.hover .number span {
+        transform: translateY(0);
+    }
+    header .nav nav.hidden {
+        display: none;
+    }
+    header .nav nav.open {
+        opacity: 1;
+    }
+    header .nav nav.open .showcase {
+        animation: slideInLeft 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    header .nav nav.open .menu {
+        animation: slideInRight 1.3s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+
+/* full navigation bar */
+
+.animation {
+    width: 300px;
+    height: 150px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80vh;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#009688), to(#CDDC39));
+    background-image: linear-gradient(to bottom right, #009688, #CDDC39);
+    -webkit-box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.2);
+}
+
+.animation span {
+    line-height: 6;
+    font-size: 23px;
+}
+
+
+/*All Animations*/
+
+.zoom-in {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.zoom-out {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.fade-in-right {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.fade-in-left {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.fade-in-up {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.fade-in-down {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.rotate {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(360px);
+    transform: translateY(360px);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.rotate-zoom-in {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: rotate(720) scale(0);
+    transform: rotate(720) scale(0);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.rotate-zoom-out {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: rotate(720) scale(2);
+    transform: rotate(720) scale(2);
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+
+.flip-up {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.flip-in-right {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: rotateX(0deg) translateX(300px);
+    transform: rotateX(0deg) translateX(300px);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.flip-in-left {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: rotateX(0deg) translateX(-300px);
+    transform: rotateX(0deg) translateX(-300px);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.flip-down-right {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-animation: down-right 1.3s;
+    animation: down-right 1.3s;
+}
+
+.reset-down-right {
+    -webkit-animation: reset-down-right 1.3s;
+    animation: reset-down-right 1.3s;
+}
+
+@-webkit-keyframes down-right {
+    0% {
+        -webkit-transform: rotate(45deg) rotateX(90deg);
+        transform: rotate(45deg) rotateX(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(45deg) rotateX(0deg);
+        transform: rotate(45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+}
+
+@keyframes down-right {
+    0% {
+        -webkit-transform: rotate(45deg) rotateX(90deg);
+        transform: rotate(45deg) rotateX(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(45deg) rotateX(0deg);
+        transform: rotate(45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes reset-down-right {
+    0% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(45deg) rotateX(0deg);
+        transform: rotate(45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg) rotateX(90deg);
+        transform: rotate(45deg) rotateX(90deg);
+    }
+}
+
+@keyframes reset-down-right {
+    0% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(45deg) rotateX(0deg);
+        transform: rotate(45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg) rotateX(90deg);
+        transform: rotate(45deg) rotateX(90deg);
+    }
+}
+
+.flip-down-left {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-animation: down-left 1.3s;
+    animation: down-left 1.3s;
+}
+
+.reset-down-left {
+    -webkit-animation: reset-down-left 1.3s;
+    animation: reset-down-left 1.3s;
+}
+
+@-webkit-keyframes down-left {
+    0% {
+        -webkit-transform: rotate(-45deg) rotateX(90deg);
+        transform: rotate(-45deg) rotateX(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(-45deg) rotateX(0deg);
+        transform: rotate(-45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+}
+
+@keyframes down-left {
+    0% {
+        -webkit-transform: rotate(-45deg) rotateX(90deg);
+        transform: rotate(-45deg) rotateX(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(-45deg) rotateX(0deg);
+        transform: rotate(-45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes reset-down-left {
+    0% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-45deg) rotateX(0deg);
+        transform: rotate(-45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) rotateX(90deg);
+        transform: rotate(-45deg) rotateX(90deg);
+    }
+}
+
+@keyframes reset-down-left {
+    0% {
+        -webkit-transform: rotate(0deg) rotateX(0deg);
+        transform: rotate(0deg) rotateX(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-45deg) rotateX(0deg);
+        transform: rotate(-45deg) rotateX(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) rotateX(90deg);
+        transform: rotate(-45deg) rotateX(90deg);
+    }
+}
+
+.drop-bounce {
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+@-webkit-keyframes drop {
+    0% {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes drop {
+    0% {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    53%,
+    80%,
+    100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    53%,
+    80%,
+    100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@-webkit-keyframes goTop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -100px, 0);
+        transform: translate3d(0, -100px, 0);
+    }
+}
+
+@keyframes goTop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -100px, 0);
+        transform: translate3d(0, -100px, 0);
+    }
+}
